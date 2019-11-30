@@ -9,7 +9,7 @@ Created on Tue Jul 16 15:39:54 2019
 import pandas as pd  
 import numpy as np
 from pandas_datareader import data as pdr
-import fix_yahoo_finance as yf
+import yfinance as yf
 yf.pdr_override() 
 import datetime
 import matplotlib.pyplot as plt
@@ -39,8 +39,6 @@ l1, = ax1.plot(-data1['vix'],'r--')
 l2, = ax2.plot(data1['sp500'], 'g-')
 ax1.set_ylabel('-vix', color  = 'r')
 ax2.set_ylabel('sp500', color = 'g')
-
-
 
 
 fig,ax1=plt.subplots(figsize=(12,8))
